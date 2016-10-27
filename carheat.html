@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" charset="utf-8" href="carheat.css">
+        <script src="carheat.js"></script>
+    </head>
+
+    <body>
+
+        <div id="maindiv"><h1 id="outsideTemp">20 C / 250 F</h1>
+
+            <div id="condition">
+                <p id="weatherCondition">Windy</p>
+
+            </div>
+
+
+            <div id="carTemp">
+                <p style=font-size:14px margin-left=25%>Temperature inside closed car:</p>
+                 <ul>
+                     <li>10</li>
+                     <li>20</li>
+                     <li>30</li>
+                     <li>40</li>
+                     <li>50</li>
+                     <li>60</li>
+
+                </ul>       
+
+                 <ul>
+                     <li id="ten"></li>
+                     <li id="twenty"></li>
+                     <li id="thirty"></li>
+                     <li id="forty"></li>
+                     <li id="fifty"></li>
+                     <li id="sixty"></li>
+
+                </ul>  
+            </div>
+
+
+        </div> 
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--     
+  //var callbackFunction = function(data) {
+    //var wind = data.query.results.channel.wind;
+    //var units = data.query.results.channel.units;
+    
+    //alert(units.temperature);
+    //console.log(units);
+  //};
+
+      
+<!--
+<script src="https://query.yahooapis.com/v1/public/yql?q=select wind from weather.forecast where woeid in (select woeid from geo.places(1) where text='chicago, il')&format=json&callback=callbackFunction"></script>
+-->
