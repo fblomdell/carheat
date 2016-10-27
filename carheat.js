@@ -3,21 +3,33 @@ var weatherUrl = "http://api.openweathermap.org/data/2.5/weather";
 var dbUrl =  "databas.php";
 var closest = "hej";
 
-$(document).ready(function(){
 
-    //hämtar data från openweathermap
+$(document).ready(function(){
+    
+    document.getElementById("search-location-button").addEventListener("click", function(){
+    var searchString = document.getElementById("search-location-input").value;
+        //console.log(searchString);
+        getWeatherData(searchString);
+});
+    
+    
+    function getWeatherData(searchString){
+          //hämtar data från openweathermap
     $.ajax({
         url: weatherUrl,
         dataType: "json",
-        data: {q: 'johannesburg', appid: '8345570b2dad5976394a640c07f03766', units: 'imperial' },
+        data: {q: searchString, appid: '8345570b2dad5976394a640c07f03766', units: 'metric' },
 
         //sparar temperaturen från openweathermap när den hämtat klart
         success:function(data){
             var temperatur = data.main.temp;
-            var weather = data.weather["0"].main
+            var weather = data.weather["0"].main;
             var wind = data.wind.speed;
+            var icon = data.weather["0"].icon;
+            var iconUrl = "http://openweathermap.org/img/w/"+icon+".png"
             //kalla på nästa funktion som ska använda temperatur och skicka med temperatur
-            dispCondition(weather, temperatur, wind);
+            console.log(icon);
+            dispCondition(weather, temperatur, wind, data.name, iconUrl);
             getTemp(temperatur);
         },
 
@@ -25,6 +37,8 @@ $(document).ready(function(){
         console.log(err);
         }
     });
+        
+    }
 
     
     //hämtar data från databasen
@@ -88,11 +102,17 @@ $(document).ready(function(){
     };
     
     //display weather condition
-    function dispCondition(weather, temperatur, wind){
+    function dispCondition(weather, temperatur, wind, cityName, iconUrl){
         $("#weatherCondition").text(weather);
+        console.log(temperatur);
+        //* 9 / 5 + 32;
+        var tempF = Math.round((temperatur * (9 / 5) +32));
+        $("#outsideTemp").text(Math.round(temperatur) + '°C / ' + tempF + "°F");
         
-        var tempCelcius = Math.round((temperatur - 32) * (5 / 9));
-        $("#outsideTemp").text(Math.round(temperatur) + 'F / ' + tempCelcius + "C");
+        $("#weatherInCity").text("Displying weather in " +cityName);
+        $("#windSpeed").text(wind +" m/s");
+        $("#weatherIcon").attr("src", iconUrl);
+       // console.log(iconUrl);
         
         //ADD WIND
         //$("#weatherCondition").text(weather);

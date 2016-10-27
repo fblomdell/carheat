@@ -9,10 +9,26 @@
 
     <body>
 
-        <div id="maindiv"><h1 id="outsideTemp">20 C / 250 F</h1>
+        <div id="maindiv">
+            
+            
+            <!-- search location btn -->
+             <div class="page-wrap">
+
+        <header class="search-bar">
+            <p class="search-text"><span class="search-location-text">What's the weather like in <input id="search-location-input" class="search-location-input" type="text" placeholder="City"> <button id="search-location-button" class="fa fa-search search-location-button search-button" placeholder="">Search</button></span></p>
+            <div class="search-location-button-group">
+                
+                <p id="weatherInCity"></p>
+                
+            </div>
+            
+            <h1 id="outsideTemp"></h1>
+            <p id="windSpeed"></p>
 
             <div id="condition">
-                <p id="weatherCondition">Windy</p>
+                <p id="weatherCondition" style=font-size:12px></p>
+                <img id="weatherIcon" alt="current weather icon">
 
             </div>
 
