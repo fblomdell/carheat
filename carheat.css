@@ -119,18 +119,24 @@ li {
 
 .li2 {
     border-top: none;
+    border-bottom: none;
 }
 
 .rightLi {
     border-right: 1px solid #696969;
 }
 
-.rightLi2 {
-    border-bottom-right-radius: 10px;
-}
 
-.leftLi2 {
-    border-bottom-left-radius: 10px;
-}
 
+#ul23 {
+    height: 78px;
+    margin-left: 87px;
+    margin-right: 58px;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, yellow 50%, red 50%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, yellow 50%, red 50%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, yellow 50%, red 50%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, yellow , red 60%); /* Standard syntax (must be last) */
+    
+}
 
