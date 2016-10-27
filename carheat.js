@@ -120,12 +120,13 @@ $(document).ready(function(){
     
     function displayWeather(temprise){
         
-        $("#ten").text(temprise.tenmin);
-        $("#twenty").text(temprise.twentymin);
-        $("#thirty").text(temprise.thirtymin);
-        $("#forty").text(temprise.fortymin);
-        $("#fifty").text(temprise.fiftymin);
-        $("#sixty").text(temprise.sixtymin); 
+        $("#zero").text(temprise.zeromin + "°F");
+        $("#ten").text(temprise.tenmin + "°F");
+        $("#twenty").text(temprise.twentymin + "°F");
+        $("#thirty").text(temprise.thirtymin + "°F");
+        $("#forty").text(temprise.fortymin + "°F");
+        $("#fifty").text(temprise.fiftymin + "°F");
+        $("#sixty").text(temprise.sixtymin + "°F"); 
     };
     
 });

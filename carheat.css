@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    
 }
 
 h1 {
@@ -13,11 +13,11 @@ p {
 }
 
 #maindiv {
-    background-color: lightblue;
+    background-color: #78B2FD ;
     margin: auto;
-    width: 414pt;
-
-    padding: 20px;
+    width: 450pt;
+    padding: 2%;
+    
     
     text-align: center;
     font-size: 100%;
@@ -35,37 +35,74 @@ p {
 }
 
 #carTemp {
-    border: 1px solid black;
+    
     border-radius: 15px;
     padding-bottom: 2%;
     border-radius: 5;
-    width: 70%;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5%;
     text-align: center;
     
 }
 
+.textBox {
+    border: None;
+    width: 15%;
+    padding: 0px;
+    padding-top: 20px;
+    color: black;
+    
+}
+
 ul {
-    list-style-type: none;
-    margin-left: 15%;
+    list-style-type: None;
+    margin-left: 5%;
     overflow:auto;
     padding: 0px;
-    margin-bottom: 1px;
-    margin-top: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #fdfdfd;
+    
 }
 
 li {
-    margin-left: 1px;
+    
     
     height: auto;
     width: 7%;
     float: left;
-    border: 1px solid black;
-    
+    border: 1px solid #696969;
+    border-right: 0px;
     padding: 10px;
-
+    padding-top: 30px;
+    padding-bottom: 30px;
     
     
 }
+
+.li1 {
+    border-top: none;
+    border-bottom: none;
+    
+}
+
+.li2 {
+    border-top: none;
+}
+
+.rightLi {
+    border-right: 1px solid #696969;
+}
+
+.rightLi2 {
+    border-bottom-right-radius: 10px;
+}
+
+.leftLi2 {
+    border-bottom-left-radius: 10px;
+}
+
+
 
