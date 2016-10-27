@@ -1,22 +1,13 @@
-body {
-    
-}
-
 h1 {
     color: black;
     text-align: center;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
 }
 
 #maindiv {
     background-color: #78B2FD ;
     margin: auto;
     width: 450pt;
-    padding: 2%;
+    padding: 0%;
     
     
     text-align: center;
@@ -27,12 +18,50 @@ p {
 
 }
 
-#condition {
-
-    width: 50%;
-    margin-left: 25%;
-    
+#searchDiv {
+    margin-top: 1px;
 }
+
+#search-text {
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.search-location-text {
+    font-size: 16px;
+    font-weight:300;
+}
+
+#weatherInCity{
+    font-size: 22px;
+    float: left;
+    padding-left: 15px;
+}
+
+#weatherIcon{
+    float: left;
+    padding-left: 15px;
+    height: 65px;
+    width: 65px;
+}
+
+#outsideTemp{
+    float: left;
+    padding-left: 15px;
+}
+
+#windSpeed{
+    float:left;
+    padding-left: 15px;
+    padding-top: 8px;
+    font-size: 18px;
+}
+
+
+#weatherInfo{
+    padding-left: 60px;
+}
+
 
 #carTemp {
     
@@ -42,7 +71,7 @@ p {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 20%;
     text-align: center;
     
 }
@@ -103,6 +132,5 @@ li {
 .leftLi2 {
     border-bottom-left-radius: 10px;
 }
-
 
 

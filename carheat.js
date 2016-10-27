@@ -18,7 +18,8 @@ $(document).ready(function(){
     $.ajax({
         url: weatherUrl,
         dataType: "json",
-        data: {q: searchString, appid: '8345570b2dad5976394a640c07f03766', units: 'metric' },
+        //ÄNDRA TILLBAKA TILL: Q: SEARCHSTRING
+        data: {q: "malmoe", appid: '8345570b2dad5976394a640c07f03766', units: 'metric' },
 
         //sparar temperaturen från openweathermap när den hämtat klart
         success:function(data){
@@ -28,8 +29,9 @@ $(document).ready(function(){
             var icon = data.weather["0"].icon;
             var iconUrl = "http://openweathermap.org/img/w/"+icon+".png"
             //kalla på nästa funktion som ska använda temperatur och skicka med temperatur
-            console.log(icon);
-            dispCondition(weather, temperatur, wind, data.name, iconUrl);
+            var location = data.name +", " +data.sys.country;
+            console.log(location);
+            dispCondition(weather, temperatur, wind, location, iconUrl);
             getTemp(temperatur);
         },
 
@@ -109,7 +111,7 @@ $(document).ready(function(){
         var tempF = Math.round((temperatur * (9 / 5) +32));
         $("#outsideTemp").text(Math.round(temperatur) + '°C / ' + tempF + "°F");
         
-        $("#weatherInCity").text("Displying weather in " +cityName);
+        $("#weatherInCity").text(cityName);
         $("#windSpeed").text(wind +" m/s");
         $("#weatherIcon").attr("src", iconUrl);
        // console.log(iconUrl);
