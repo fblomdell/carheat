@@ -1,10 +1,20 @@
+@font-face {
+    font-family: sanFranRegular;
+    src: url(font/SF-UI-Text-Regular.otf);
+}
+
+@font-face {
+    font-family: sanFranSemibold;
+    src: url(font/SF-UI-Text-Semibold);
+}
+
 h1 {
     color: black;
     text-align: center;
 }
 
 #maindiv {
-    background-color: #78B2FD ;
+    background-color: #1b5dc6 ;
     margin: auto;
     width: 450pt;
     padding: 0%;
@@ -12,7 +22,7 @@ h1 {
     
     text-align: center;
     font-size: 100%;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 25px;
     
 
@@ -28,11 +38,15 @@ h1 {
 }
 
 .search-location-text {
+    font-family: sanFranRegular;
+    color: white;
     font-size: 16px;
     font-weight:300;
 }
 
 #weatherInCity{
+    font-family: sanFranSemibold;
+    color: white;
     font-size: 22px;
     float: left;
     padding-left: 15px;
@@ -46,11 +60,15 @@ h1 {
 }
 
 #outsideTemp{
+    font-family: sanFranRegular;
+    color: white;
     float: left;
     padding-left: 15px;
 }
 
 #windSpeed{
+    font-family: sanFranRegular;
+    color: white;
     float:left;
     padding-left: 15px;
     padding-top: 8px;
@@ -111,9 +129,21 @@ li {
     
 }
 
+#carTemp p {
+    font-family: sanFranRegular;
+    color:white;
+}
+
+.textBox{
+    font-family: sanFranRegular;
+    color:white;
+}
+
 .li1 {
     border-top: none;
     border-bottom: none;
+    color: white;
+    font-family: sanFranRegular;
     
     
 }

@@ -1,7 +1,6 @@
 var weatherUrl = "http://api.openweathermap.org/data/2.5/weather";  
 
 var dbUrl =  "databas.php";
-var closest = "hej";
 
 
 $(document).ready(function(){
@@ -117,6 +116,7 @@ $(document).ready(function(){
         $("#weatherInCity").text(cityName);
         $("#windSpeed").text(wind +" m/s");
         $("#weatherIcon").attr("src", iconUrl);
+        $("#weatherIcon").attr("style", "inline");
        // console.log(iconUrl);
         
         //ADD WIND
