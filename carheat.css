@@ -90,10 +90,11 @@ h1 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20%;
+    margin-top: 2%;
     text-align: center;
     
 }
+
 
 .textBox {
     font-family: sanFranRegular;
@@ -156,7 +157,9 @@ li {
     border-right: 1px solid #696969;
 }
 
-
+#zero{
+    color: black;
+}
 
 #ul23 {
     height: 78px;
