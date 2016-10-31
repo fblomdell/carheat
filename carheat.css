@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: sanFranSemibold;
-    src: url(font/SF-UI-Text-Semibold);
+    src: url(font/SF-UI-Text-Semibold.otf);
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
     text-align: center;
     font-size: 100%;
     border: 1px solid;
-    border-radius: 25px;
+    border-radius: 5px;
     
 
 }
@@ -45,34 +45,35 @@ h1 {
 }
 
 #weatherInCity{
-    font-family: sanFranSemibold;
+    font-family: sanFranRegular;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     float: left;
-    padding-left: 15px;
+    padding-left: 5%;
 }
 
 #weatherIcon{
     float: left;
-    padding-left: 15px;
+    padding-left: 5%;
     height: 65px;
     width: 65px;
 }
 
 #outsideTemp{
-    font-family: sanFranRegular;
+    font-family: sanFranSemibold;
     color: white;
     float: left;
-    padding-left: 15px;
+    padding-left: 5%;
+    font-size: 20px;
 }
 
 #windSpeed{
     font-family: sanFranRegular;
     color: white;
     float:left;
-    padding-left: 15px;
-    padding-top: 8px;
-    font-size: 18px;
+    padding-left: 3%;
+    padding-top: 2%;
+    font-size: 16px;
 }
 
 
@@ -95,12 +96,12 @@ h1 {
 }
 
 .textBox {
+    font-family: sanFranRegular;
+    color:white;
     border: None;
-    width: 15%;
+    width: 17%;
     padding: 0px;
-    padding-top: 20px;
-    color: black;
-    
+    padding-top: 20px;    
 }
 
 ul {
@@ -134,10 +135,6 @@ li {
     color:white;
 }
 
-.textBox{
-    font-family: sanFranRegular;
-    color:white;
-}
 
 .li1 {
     border-top: none;
@@ -149,6 +146,8 @@ li {
 }
 
 .li2 {
+    font-family: sanFranRegular;
+    color:white;
     border-top: none;
     border-bottom: none;
 }
@@ -161,8 +160,8 @@ li {
 
 #ul23 {
     height: 78px;
-    margin-left: 87px;
-    margin-right: 58px;
+    margin-left: 98px;
+    margin-right: 47px;
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, yellow 50%, red 50%); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(left, yellow 50%, red 50%); /* For Opera 11.1 to 12.0 */
