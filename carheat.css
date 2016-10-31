@@ -171,10 +171,10 @@ li {
     margin-left: 98px;
     margin-right: 47px;
     background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, #FFCC00 20%, red 70%); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left, #FFCC00  20%, red 70%); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left, #FFCC00  20%, red 70%); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #FFCC00  20%, red 70%); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(left, #FFCC00 30%, red 60%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #FFCC00  30%, red 60%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #FFCC00  30%, red 60%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FFCC00  30%, red 60%); /* Standard syntax (must be last) */
     
 }
 

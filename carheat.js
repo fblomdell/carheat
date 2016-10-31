@@ -32,7 +32,14 @@ $(document).ready(function(){
             var tempF = Math.round((temperatur * (9 / 5) +32));
             console.log(location);
             dispCondition(weather, temperatur, wind, location, iconUrl, tempF);
-            getTemp(tempF);
+            if (tempF < 65){
+                $("#carTemp").html("<h2>Djup text om livet</h2>");
+                console.log("hej");
+            }
+            else{
+                getTemp(tempF);
+            }
+            
         },
 
         error:function(err){
