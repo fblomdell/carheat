@@ -77,6 +77,11 @@ h1 {
 }
 
 
+#tempInfo{
+    color: darkgray;
+    font-size: 16
+}
+
 #weatherInfo{
     padding-left: 60px;
 }
@@ -133,7 +138,6 @@ li {
 
 #carTemp p {
     font-family: sanFranRegular;
-    color:white;
 }
 
 
