@@ -4,9 +4,12 @@ var dbUrl =  "databas.php";
 
 
 $(document).ready(function(){
-    
+    var carTempClone = $("#carTemp").clone();
+    $("#carTemp").hide();
+    console.log(carTempClone);
     document.getElementById("search-location-button").addEventListener("click", function(){
-    var searchString = document.getElementById("search-location-input").value;
+        var searchString = document.getElementById("search-location-input").value;
+        
         //console.log(searchString);
         getWeatherData(searchString);
 });
@@ -32,11 +35,13 @@ $(document).ready(function(){
             var tempF = Math.round((temperatur * (9 / 5) +32));
             console.log(location);
             dispCondition(weather, temperatur, wind, location, iconUrl, tempF);
+            
             if (tempF < 65){
                 $("#carTemp").html("<h2>Djup text om livet</h2>");
-                console.log("hej");
             }
             else{
+                $("#carTemp").show();
+                $("#carTemp").replaceWith(carTempClone.clone());
                 getTemp(tempF);
             }
             
