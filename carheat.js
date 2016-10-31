@@ -47,14 +47,15 @@ $(document).ready(function(){
     //hämtar data från databasen
     function getTemp(temperatur){
         $.ajax({
-            type: "POST",
-            url: dbUrl,
+            
+            type: "GET",
+            url: dbUrl + "/zeromin",
             dataType: "json",
             data: {tempMinute: "zeromin"},
-
+            
             //när den hämtat allt så läggs alla värden från kolumnerna zeromin i en ny array
             success:function(data){
-
+                
                 var zerominArray = [];
                 console.log(data);
                 $(data).each(function(index, value){
@@ -80,14 +81,15 @@ $(document).ready(function(){
             error:function(err){
             console.log(err);
             }
-        });    
+        });  
+
     }
     
 
     function getTemprise(closest){
         $.ajax({
-            type: "POST",
-            url: dbUrl,
+            type: "GET",
+            url: dbUrl + "/" + closest,
             dataType: "json",
             data: {getTemprise: closest},
 
@@ -121,15 +123,21 @@ $(document).ready(function(){
         //$("#weatherCondition").text(weather);
     }
     
+    
+    
     function displayWeather(temprise){
         
-        $("#zero").text(temprise.zeromin + "°F");
-        $("#ten").text(temprise.tenmin + "°F");
-        $("#twenty").text(temprise.twentymin + "°F");
-        $("#thirty").text(temprise.thirtymin + "°F");
-        $("#forty").text(temprise.fortymin + "°F");
-        $("#fifty").text(temprise.fiftymin + "°F");
-        $("#sixty").text(temprise.sixtymin + "°F"); 
-    };
+        $("#zero").text(temprise.zeromin + "°F" + calculateCelsius(temprise.zeromin) + "°C");
+        $("#ten").text(temprise.tenmin + "°F" + calculateCelsius(temprise.tenmin) + "°C");
+        $("#twenty").text(temprise.twentymin + "°F" + calculateCelsius(temprise.twentymin) + "°C");
+        $("#thirty").text(temprise.thirtymin + "°F" + calculateCelsius(temprise.thirtymin) + "°C");
+        $("#forty").text(temprise.fortymin + "°F" + calculateCelsius(temprise.fortymin) + "°C");
+        $("#fifty").text(temprise.fiftymin + "°F" + calculateCelsius(temprise.fiftymin) + "°C");
+        $("#sixty").text(temprise.sixtymin + "°F" + calculateCelsius(temprise.sixtymin) + "°C"); 
+    }
+    
+    function calculateCelsius(valInFarenheit){
+        return Math.round((valInFarenheit * (5 / 9) -32))
+    }
     
 });

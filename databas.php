@@ -1,17 +1,30 @@
-<?php
-    //om variabeln name är skickat med POST från JS, exekvera kod
-    if(isset($_POST["tempMinute"])){
-        $zmin = htmlspecialchars($_POST["tempMinute"]);
-        getZeroMin($zmin);
+<?php   
+    //hämtar url och kollar vad sista path i URL är
+    $url = parse_url($_SERVER['REQUEST_URI']);
+
+    $path = $url['path'];
+
+    $end = basename(parse_url($path, PHP_URL_PATH));
+
+    //hämtar variabler som skickas med i GET och kollar att det är samma som sista path i url
+    if ($url != '/'){
+        parse_str($url['query']);
+        
+        if($end == $tempMinute){
+            getZeroMin($tempMinute);
+
+        } elseif ($end == $getTemprise){
+            getTemprise($getTemprise);
+
+        }
+
     }
     
-    //om variabeln getTemp är skickat med POST från JS, exekvera kod
-    if(isset($_POST["getTemprise"])){
-        $getTemp = htmlspecialchars($_POST["getTemprise"]);
-        getTemprise($getTemp);
-    }
 
-    //ta den postade variabeln(zeromin) och använd den i en fråga till databasen 
+
+//https://docs.phalconphp.com/en/latest/api/Phalcon_Mvc_Micro.html
+
+    //ta variabeln(tempMinute) och använd den i en fråga till databasen 
     function getZeroMin($zmin){
         $dir = 'sqlite:carheat.db';
         $db  = new PDO($dir) or die("cannot open the database");
@@ -25,7 +38,7 @@
         }
     }
     
-    //ta den postade temperaturen och använd den för att hämta temphöjningen från databasen
+    //ta temperaturen och använd den för att hämta temphöjningen från databasen
     function getTemprise($getTemp){
         $dir = 'sqlite:carheat.db';
         $db  = new PDO($dir) or die("cannot open the database");
