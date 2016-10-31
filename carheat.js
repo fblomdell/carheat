@@ -117,6 +117,9 @@ $(document).ready(function(){
         $("#windSpeed").text(wind +" m/s");
         $("#weatherIcon").attr("src", iconUrl);
         $("#weatherIcon").attr("style", "inline");
+        $("#weatherInfo").attr("style", "inline");
+        $("#carTemp").attr("style", "inline");
+        
        // console.log(iconUrl);
         
         //ADD WIND
