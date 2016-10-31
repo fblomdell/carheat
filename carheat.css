@@ -96,7 +96,7 @@ h1 {
 
 .textBox {
     border: None;
-    width: 15%;
+    width: 17%;
     padding: 0px;
     padding-top: 20px;
     color: black;
@@ -161,8 +161,8 @@ li {
 
 #ul23 {
     height: 78px;
-    margin-left: 87px;
-    margin-right: 58px;
+    margin: 0px;
+    margin-right: 0px;
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, yellow 50%, red 50%); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(left, yellow 50%, red 50%); /* For Opera 11.1 to 12.0 */
