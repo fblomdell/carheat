@@ -50,7 +50,7 @@ $(document).ready(function(){
             type: "GET",
             url: dbUrl + "/zeromin",
             dataType: "json",
-            data: {tempMinute: "zeromin"},
+            
             
             //när den hämtat allt så läggs alla värden från kolumnerna zeromin i en ny array
             success:function(data){
@@ -90,7 +90,7 @@ $(document).ready(function(){
             type: "GET",
             url: dbUrl + "/" + closest,
             dataType: "json",
-            data: {getTemprise: closest},
+            
 
             //när den hämtat allt så läggs alla värden från kolumnerna zeromin i en ny array
             success:function(data){
@@ -127,17 +127,17 @@ $(document).ready(function(){
     
     function displayWeather(temprise){
         
-        $("#zero").text(temprise.zeromin + "°F" + calculateCelsius(temprise.zeromin) + "°C");
-        $("#ten").text(temprise.tenmin + "°F" + calculateCelsius(temprise.tenmin) + "°C");
-        $("#twenty").text(temprise.twentymin + "°F" + calculateCelsius(temprise.twentymin) + "°C");
-        $("#thirty").text(temprise.thirtymin + "°F" + calculateCelsius(temprise.thirtymin) + "°C");
-        $("#forty").text(temprise.fortymin + "°F" + calculateCelsius(temprise.fortymin) + "°C");
-        $("#fifty").text(temprise.fiftymin + "°F" + calculateCelsius(temprise.fiftymin) + "°C");
-        $("#sixty").text(temprise.sixtymin + "°F" + calculateCelsius(temprise.sixtymin) + "°C"); 
+        $("#zero").text(calculateCelsius(temprise.zeromin) + "°C");
+        $("#ten").text(calculateCelsius(temprise.tenmin) + "°C");
+        $("#twenty").text(calculateCelsius(temprise.twentymin) + "°C");
+        $("#thirty").text(calculateCelsius(temprise.thirtymin) + "°C");
+        $("#forty").text(calculateCelsius(temprise.fortymin) + "°C");
+        $("#fifty").text(calculateCelsius(temprise.fiftymin) + "°C");
+        $("#sixty").text(calculateCelsius(temprise.sixtymin) + "°C"); 
     }
     
     function calculateCelsius(valInFarenheit){
-        return Math.round((valInFarenheit * (5 / 9) -32))
+        return Math.round(((valInFarenheit -32) * (5 / 9) ))
     }
     
 });
