@@ -50,7 +50,7 @@ $(document).ready(function(){
             type: "GET",
             url: dbUrl + "/zeromin",
             dataType: "json",
-            data: {tempMinute: "zeromin"},
+            
             
             //när den hämtat allt så läggs alla värden från kolumnerna zeromin i en ny array
             success:function(data){
@@ -90,7 +90,7 @@ $(document).ready(function(){
             type: "GET",
             url: dbUrl + "/" + closest,
             dataType: "json",
-            data: {getTemprise: closest},
+            
 
             //när den hämtat allt så läggs alla värden från kolumnerna zeromin i en ny array
             success:function(data){

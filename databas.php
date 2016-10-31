@@ -6,19 +6,33 @@
 
     $end = basename(parse_url($path, PHP_URL_PATH));
 
-    //hämtar variabler som skickas med i GET och kollar att det är samma som sista path i url
-    if ($url != '/'){
-        parse_str($url['query']);
-        
-        if($end == $tempMinute){
-            getZeroMin($tempMinute);
 
-        } elseif ($end == $getTemprise){
-            getTemprise($getTemprise);
+    if($end == "zeromin"){
+        getZeroMin($end);
 
+    } elseif ($end != "zeromin"){
+        $dir = 'sqlite:carheat.db';
+        $db  = new PDO($dir) or die("cannot open the database");
+
+        $query =  "SELECT zeromin FROM heatrise";
+        $stmt = $db->query($query);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
+
+        foreach ($result as $entry){
+            if ($end == $entry['zeromin']){
+                getTemprise($end);
+
+            }
         }
 
     }
+
+    
+
+
+    //hämtar variabler som skickas med i GET och kollar att det är samma som sista path i url
+
     
 
 
