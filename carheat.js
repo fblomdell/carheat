@@ -43,9 +43,9 @@ $(document).ready(function(){
             var tempF = Math.round((temperatur * (9 / 5) +32));
             console.log(location);
             dispCondition(weather, temperatur, wind, location, iconUrl, tempF);
-            
+            //show error message if outside temp is too low
             if (tempF < 65){
-                $("#carTemp").html("<p id='lowTemp'>Accurate car temperatures require minimum outside temp of ~18°C</p>");
+                $("#carTemp").html("<p id='lowTemp'>Accurate car temperatures require minimum outside temp of 18°C</p>");
             }
             else{
                 $("#carTemp").show();
