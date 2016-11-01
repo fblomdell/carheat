@@ -37,7 +37,7 @@ $(document).ready(function(){
             dispCondition(weather, temperatur, wind, location, iconUrl, tempF);
             
             if (tempF < 65){
-                $("#carTemp").html("<h2>Temp too low for accurate tempchange in car.</h2>");
+                $("#carTemp").html("<h2>Accurate car temperatures require minimum 20C</h2>");
             }
             else{
                 $("#carTemp").show();
