@@ -45,7 +45,7 @@ $(document).ready(function(){
             dispCondition(weather, temperatur, wind, location, iconUrl, tempF);
             
             if (tempF < 65){
-                $("#carTemp").html("<p id='lowTemp'>Accurate car temperatures require minimum outside temp of 20°C</p>");
+                $("#carTemp").html("<p id='lowTemp'>Accurate car temperatures require minimum outside temp of ~18°C</p>");
             }
             else{
                 $("#carTemp").show();
