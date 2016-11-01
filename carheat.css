@@ -57,6 +57,7 @@ h1 {
     float: left;
     padding-left: 5%;
     margin: 0px;
+    padding-top: 15px;
 }
 
 #weatherIcon{
@@ -74,6 +75,7 @@ h1 {
     padding-left: 5%;
     font-size: 20px;
     margin: 0px;
+    padding-top: 15px;
 }
 
 #windSpeed{
@@ -81,8 +83,9 @@ h1 {
     color: white;
     float:left;
     padding-left: 3%;
+    padding-top: 15px;
+    font-size: 16px;
 
-    font-size: 20px;
     margin: 0px;
 }
 
@@ -93,7 +96,7 @@ h1 {
 }
 
 #weatherInfo{
-    padding: 20px;
+
     padding-left: 5%;
     padding-right: 5%;
     overflow: hidden;
@@ -119,23 +122,14 @@ hr {
 }
 
 
-.textBox {
-    font-family: sanFranRegular;
-    color:white;
-    border: None;
-    width: 17%;
-    padding: 0px;
-    padding-top: 10px;    
-    padding-bottom: 0px;    
-}
-
 ul {
     list-style-type: None;
-    margin-left: 5%;
+    margin-left: 0px;
     overflow:hidden;
     padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    margin-right: 0px;
     color: #fdfdfd;
     
 }
@@ -159,8 +153,14 @@ li {
 }
 
 
-#carTemp p {
+#carTemp .textBox {
     font-family: sanFranRegular;
+    color:white;
+    clear: both;
+    float: left;
+    width: 20%;
+    overflow: hidden;
+    margin: 0px;
 }
 
 
@@ -179,6 +179,7 @@ li {
     color:white;
     border-top: none;
     border-bottom: none;
+    
 
 }
 
@@ -192,8 +193,13 @@ li {
 
 #ul23 {
     height: 49px;
-    margin-left: 98px;
-    margin-right: 47px;
+
+
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #FFCC00 30%, red 60%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #FFCC00  30%, red 60%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #FFCC00  30%, red 60%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FFCC00  30%, red 60%); /* Standard syntax (must be last) */
 
     
 }
