@@ -4,6 +4,14 @@ var dbUrl =  "databas.php";
 
 
 $(document).ready(function(){
+    
+    //use enter-key to search
+    $("#search-location-input").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#search-location-button").click();
+    }
+});
+    
     var carTempClone = $("#carTemp").clone();
     $("#carTemp").hide();
     console.log(carTempClone);
