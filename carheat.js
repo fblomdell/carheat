@@ -148,6 +148,7 @@ $(document).ready(function(){
         $("#thirty").text(calculateCelsius(temprise.thirtymin) + "°C");
         $("#forty").text(calculateCelsius(temprise.fortymin) + "°C");
         $("#fifty").text(calculateCelsius(temprise.fiftymin) + "°C");
+        $("#sixty").text(calculateCelsius(temprise.sixtymin) + "°C");
 
         
     }
