@@ -8,13 +8,29 @@
     src: url(font/SF-UI-Text-Semibold.otf);
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1A2980 , #26D0CE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1A2980 , #26D0CE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1A2980 , #26D0CE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1A2980 , #26D0CE); /* Standard syntax */
+}
+
 h1 {
     color: black;
     text-align: center;
 }
 
 #maindiv {
-    background-color: #1b5dc6 ;
+
     margin: auto;
     width: 50%;
     padding: 0%;
@@ -26,11 +42,7 @@ h1 {
     border-radius: 5px;
     border-color: white;
     
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#1A2980 , #26D0CE); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#1A2980 , #26D0CE); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#1A2980 , #26D0CE); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#1A2980 , #26D0CE); /* Standard syntax */
+
 
 }
 
@@ -187,8 +199,5 @@ li {
     border-right: 1px solid #696969;
 }
 
-#zero{
-    color: black;
-}
 
 
