@@ -130,6 +130,12 @@ hr {
     
 }
 
+#lowTemp {
+    color:white;
+    font-size: 16px;
+    font-family: sanFranRegular;
+}
+
 
 ul {
     list-style-type: None;

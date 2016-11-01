@@ -14,30 +14,30 @@ $(document).ready(function(){
         getWeatherData(searchString);
 });
     
-    
+    //fetch weather data from openweathermap.org
     function getWeatherData(searchString){
-          //hämtar data från openweathermap
+          
     $.ajax({
         url: weatherUrl,
         dataType: "json",
-        //ÄNDRA TILLBAKA TILL: Q: SEARCHSTRING
+        
         data: {q: searchString, appid: '8345570b2dad5976394a640c07f03766', units: 'metric' },
 
-        //sparar temperaturen från openweathermap när den hämtat klart
+        //save temp from openweathermap if success
         success:function(data){
             var temperatur = data.main.temp;
             var weather = data.weather["0"].main;
             var wind = data.wind.speed;
             var icon = data.weather["0"].icon;
             var iconUrl = "http://openweathermap.org/img/w/"+icon+".png"
-            //kalla på nästa funktion som ska använda temperatur och skicka med temperatur
+            
             var location = data.name +", " +data.sys.country;
             var tempF = Math.round((temperatur * (9 / 5) +32));
             console.log(location);
             dispCondition(weather, temperatur, wind, location, iconUrl, tempF);
             
             if (tempF < 65){
-                $("#carTemp").html("<h2>Accurate car temperatures require minimum 20C</h2>");
+                $("#carTemp").html("<p id='lowTemp'>Accurate car temperatures require minimum outside temp of 20°C</p>");
             }
             else{
                 $("#carTemp").show();
@@ -55,7 +55,7 @@ $(document).ready(function(){
     }
 
     
-    //hämtar data från databasen
+    //get all zeromin values from DB
     function getTemp(temperatur){
         $.ajax({
             
@@ -64,7 +64,7 @@ $(document).ready(function(){
             dataType: "json",
             
             
-            //när den hämtat allt så läggs alla värden från kolumnerna zeromin i en ny array
+            //save data in array
             success:function(data){
                 
                 var zerominArray = [];
@@ -77,7 +77,8 @@ $(document).ready(function(){
                 });
 
 
-                //jämför openweather temp med zerominarrayen och tar närmsta värdet, ÄR I FARENHEIT!!!!!!
+
+                //compare openweathermap temp with zeromin array (from db) and return closest value (return is in Farenheit)
                 var closest = null;
                 $.each(zerominArray, function(index, value){
                   if (closest == null || Math.abs(this - temperatur) < Math.abs(closest - temperatur)) {
@@ -96,7 +97,7 @@ $(document).ready(function(){
 
     }
     
-
+    //get tempchange data based on outside temp
     function getTemprise(closest){
         $.ajax({
             type: "GET",
@@ -104,7 +105,7 @@ $(document).ready(function(){
             dataType: "json",
             
 
-            //när den hämtat allt så läggs alla värden från kolumnerna zeromin i en ny array
+            
             success:function(data){
                 var temprise = data['0'];
                 displayWeather(temprise);
@@ -132,14 +133,10 @@ $(document).ready(function(){
         $("#weatherInfo").attr("style", "inline");
         $("#carTemp").attr("style", "inline");
         
-       // console.log(iconUrl);
-        
-        //ADD WIND
-        //$("#weatherCondition").text(weather);
     }
     
     
-    
+    //display tempchange in car
     function displayWeather(temprise){
         
         $("#zero").text(calculateCelsius(temprise.zeromin) + "°C");
@@ -153,6 +150,7 @@ $(document).ready(function(){
         
     }
     
+    //convert Frenheit to Celcius
     function calculateCelsius(valInFarenheit){
         return Math.round(((valInFarenheit -32) * (5 / 9) ))
     }
