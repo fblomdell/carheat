@@ -32,14 +32,13 @@ h1 {
 #maindiv {
 
     margin: auto;
-    width: 50%;
+    width: 700px;
     padding: 0%;
     min-width: 300px;
     
     text-align: center;
     font-size: 100%;
-    border: 1px solid;
-    border-radius: 5px;
+
     border-color: white;
 }
 
@@ -105,9 +104,9 @@ h1 {
 }
 
 #weatherInfo{
-
-    padding-left: 5%;
-    padding-right: 5%;
+    text-align: center;
+    padding-left: 12%;
+    padding-right: 8%;
     overflow: hidden;
 
 }
@@ -118,10 +117,11 @@ hr {
 }
 
 #carTemp {
-    
-    border-radius: 15px;
+    padding-left: 8%;
+    padding-right: 8%;
+
     padding-bottom: 2%;
-    border-radius: 5;
+
     width: 100%;
     margin-left: auto;
     margin-right: auto;
