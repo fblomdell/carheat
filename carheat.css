@@ -32,7 +32,7 @@ h1 {
 #maindiv {
 
     margin: auto;
-    width: 700px;
+    width: 600px;
     padding: 0%;
     min-width: 300px;
     
@@ -62,15 +62,15 @@ h1 {
     font-family: sanFranRegular;
     color: white;
     font-size: 20px;
-    float: left;
-    padding-left: 5%;
+    display: inline;
+
     margin: 0px;
-    padding-top: 15px;
+
 }
 
 #weatherIcon{
-    float: left;
-    padding-left: 5%;
+    display: inline;
+
     height: 10%;
     width: 10%;
     margin: 0px;
@@ -79,19 +79,19 @@ h1 {
 #outsideTemp{
     font-family: sanFranSemibold;
     color: white;
-    float: left;
-    padding-left: 5%;
+    display: inline;
+
     font-size: 20px;
     margin: 0px;
-    padding-top: 15px;
+
 }
 
 #windSpeed{
     font-family: sanFranRegular;
     color: white;
-    float:left;
-    padding-left: 3%;
-    padding-top: 15px;
+    display: inline;
+    padding-left: 10px;
+
     font-size: 18px;
 
     margin: 0px;
@@ -104,9 +104,9 @@ h1 {
 }
 
 #weatherInfo{
+    display: inline;
     text-align: center;
-    padding-left: 12%;
-    padding-right: 8%;
+
     overflow: hidden;
 
 }
@@ -131,6 +131,9 @@ hr {
 }
 
 #lowTemp {
+    text-align: left;
+    padding-left: 8%;
+    padding-right: 8%;
     color:white;
     font-size: 16px;
     font-family: sanFranRegular;
